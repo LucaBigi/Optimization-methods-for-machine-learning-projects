@@ -1,40 +1,52 @@
-# University Projects Repository
+# Optimization Methods for Machine Learning Projects
 
-This repository contains two separate university projects, each located in its own folder.  
-These projects were part of the *Optimization Methods for Machine Learning* course at Sapienza University of Rome.  
-The main objective was to **manually implement and optimize** classical ML models without relying on external training libraries.
+## Abstract:
+This repository collects two projects from the Optimization Methods for Machine Learning course at Sapienza University.
+The goal was to implement classical ML models from scratch without using high-level training libraries.
+Implemented models include MLP, RBF, and SVMs with custom optimization routines (gradient descent, decomposition, SMO).
+Experiments achieved >99% accuracy on MNIST and low MSE in regression tasks.
+The work demonstrates strong foundations in ML theory, algorithmic implementation, and performance evaluation.
 
-## Key Highlights
-- Implemented **Multilayer Perceptron (MLP)** and **Radial Basis Function (RBF)** networks for regression.
-- Developed a **Support Vector Machine (SVM)** classifier for binary and multiclass problems (MNIST).
-- Designed all optimization routines manually (gradient descent, decomposition, Most Violating Pair algorithm).
+---
+
+## Project Overview
+
+This repository contains two separate university projects, each located in its own folder.These projects were part of the *Optimization Methods for Machine Learning* course at Sapienza University of Rome. The main objective was to **manually implement and optimize** classical ML models without relying on external training libraries.
+
+Key highlights:
+   - Implemented **Multilayer Perceptron (MLP)** and **Radial Basis Function (RBF)** networks for regression.
+   - Developed a **Support Vector Machine (SVM)** classifier for binary and multiclass problems (MNIST).
+   - Designed all optimization routines manually (gradient descent, decomposition, Most Violating Pair algorithm).
 
 Each project folder contains:
-- The **project report** detailing the technical implementation.
-- The **project assignment** for reference.
-- The **code**, organized into subfolders by assignment question.
+   - The **project report** detailing the technical implementation.
+   - The **project assignment** for reference.
+   - The **code**, organized into subfolders by assignment question.
 
 Each question folder includes:
-- A `functions` file with the necessary helper functions.
-- A `run` file to execute the experiments.
+   - A `functions` file with the necessary helper functions.
+   - A `run` file to execute the experiments.
 
 To run any experiment, execute the `run` file in the corresponding folder. All helper functions are self-contained within the `functions` files.
+
+---
 
 ## Dependencies
 
 The projects require the following external Python libraries:
+   - **numpy** – arrays, and numerical operations  
+   - **pandas** – dataset loading and manipulation
+   - **matplotlib** – 2D and 3D visualizations
+   - **scipy** – optimization (`scipy.optimize.minimize`)  
+   - **scikit-learn** – preprocessing, splitting, and metrics  
+   - **cvxopt** – quadratic programming solver for the SVM formulation  
 
-- **numpy** – arrays, and numerical operations  
-- **pandas** – dataset loading and manipulation
-- **matplotlib** – 2D and 3D visualizations
-- **scipy** – optimization (`scipy.optimize.minimize`)  
-- **scikit-learn** – preprocessing, splitting, and metrics  
-- **cvxopt** – quadratic programming solver for the SVM formulation  
-
+---
 
 **RESULTS**
 
 ### Regression Models
+
 | Model              | Final Validation MSE | Optimization Time |
 |--------------------|----------------------|-------------------|
 | Full MLP           | 2.10 × 10⁻⁴          | 1.35 s            |
@@ -54,7 +66,3 @@ The projects require the following external Python libraries:
 ---
 
 Detailed explanations and analyses are provided in the **project reports** included in each folder.
-
-
-
-
